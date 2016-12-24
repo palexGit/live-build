@@ -10,27 +10,26 @@ sed -i -e "s/Port 22/Port 5789/g" /etc/ssh/sshd_config
 
 ####
 # Ajout de font dans le repertoire /etc/fonts/conf.avail etc..
-#cat <<EOF > /etc/fonts/conf.avail/70-no-bitmaps.conf
-#<?xml version="1.0"?>
-#<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-#<fontconfig>
-#<!-- Reject bitmap fonts -->
-#<selectfont>
-#  <rejectfont>
-#   <pattern>
-#     <patelt name="scalable"><bool>false</bool></patelt>
-#   </pattern>
-#  </rejectfont>
-#</selectfont>
-#</fontconfig>
-#
-#EOF
+rm /etc/fonts/conf.d/70-no-bitmaps.conf
+cat <<EOF > /etc/fonts/conf.avail/70-no-bitmaps.conf
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+<!-- Reject bitmap fonts -->
+<!-- Benoit -->
+<selectfont>
+  <rejectfont>
+   <pattern>
+     <patelt name="scalable"><bool>false</bool></patelt>
+   </pattern>
+  </rejectfont>
+</selectfont>
+</fontconfig>
 
-#ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/70-no-bitmaps.conf
+EOF
+
+ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/70-no-bitmaps.conf
 
 
-#cd /home/$USER/app
-#chmod +x VBoxLinuxAdditions.run
-#./VBoxLinuxAdditions.run
 
 

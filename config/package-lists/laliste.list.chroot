@@ -1,0 +1,19 @@
+#################################
+# Liste des packets a installer #
+#################################
+ 
+libsdl-ttf2.0-0 libgtk2.0-0 libqtgui4 libgconf-2-4 
+xserver-xorg-video-all xfonts-base xinit 
+x11-xserver-utils alsa-base alsa-utils libsdl1.2debian sshfs acpid 
+sudo git psmisc console-setup console-setup-linux xfce4 lightdm
+geany network-manager
+
+build-essential module-assistant dkms
+numlockx
+ssh
+linux-headers-3.16.0-4-amd64
+bash
+mousepad
+ca-certificates
+firefox-esr firefox-esr-l10n-fr
+p7zip-full

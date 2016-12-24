@@ -1,0 +1,3 @@
+#!/bin/sh
+
+lb build noauto "${@}" 2>&1 | tee build-`date +%Y%m%d-%H%M`.log

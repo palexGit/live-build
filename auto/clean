@@ -1,0 +1,6 @@
+#!/bin/sh
+
+lb clean noauto "${@}"
+
+rm -f config/binary config/bootstrap config/build config/chroot config/common config/source
+rm -Rf config/includes config/includes.bootstrap config/includes.source
